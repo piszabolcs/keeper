@@ -1,0 +1,81 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# virtual environments
+.venv/
+venv/
+env/
+
+# build / packaging output and logs
+build/
+dist/
+*.log
+logs/
+
+# secrets - never committed
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials.json
+
+# downloaded model weights (tools/download_models.py fetches them)
+models/
+
+# photos: test material never belongs in the repository ...
+*.jpg
+*.jpeg
+*.JPG
+*.JPEG
+*.arw
+*.ARW
+*.png
+*.PNG
+*.tif
+*.tiff
+# ... except the app's own assets and the README screenshots, which
+# tools/screenshots.py renders from synthetic images
+!assets/**/*.png
+!assets/**/*.jpg
+# ... and the portfolio logo and screenshots under docs/
+!docs/assets/*.png
+!docs/screenshots/*.png
+
+# the face model is small (230 kB, MIT) and needed at run time
+!assets/*.onnx
+
+# sample material and archives
+Mintas/
+*.zip
+*.7z
+*.rar
+
+# Keeper's undo log in processed folders
+.keeper_log.json
+.keeper_log.json.tmp
+
+# raw (multi-MB) logo sources: kept locally; tools/logo.py derives the
+# small committed assets from them
+branding/
+
+# internal Hungarian development notes / AI-workflow documents (local only)
+docs/superpowers/
+docs/ALLAPOT.md
+photo_culling_assistant_CC_leiras.md
+
+# local databases
+*.db
+*.sqlite
+
+# editors and OS
+.idea/
+.vscode/
+*.swp
+Thumbs.db
+desktop.ini

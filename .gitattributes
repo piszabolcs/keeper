@@ -1,0 +1,7 @@
+# Windows batch files NEED CRLF: with LF cmd.exe misreads them (it drops the
+# first characters of lines and "rem" comments turn into commands).
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Python sources stay LF regardless of the local git settings
+*.py text eol=lf
